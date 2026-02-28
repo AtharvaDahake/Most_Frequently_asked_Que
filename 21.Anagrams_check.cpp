@@ -1,0 +1,25 @@
+#include<iostream>
+#include<string>
+#include<algorithm>
+using namespace std ;
+bool Anagrams(string str1, string str2) {
+    if(str1.length()!=str2.length()){
+        return false;
+    }
+    sort(str1.begin(),str1.end());
+    sort(str2.begin(),str2.end());
+
+    return str1==str2;
+
+}
+int main(){
+    string str1;
+    cout<<"enter the first string : ";
+    getline(cin,str1);
+    string str2;
+    cout<<"enter the secong string : ";
+    getline(cin,str2);
+    int ans1=Anagrams(str1,str2);
+    cout<<ans1<<endl;
+    return 0;
+}
